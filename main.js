@@ -734,35 +734,41 @@ var totalDamage = 0;
 // 26. Create a while loop that runs as long as "slaying" is equal to true. For now, set "slaying" to false
 //     inside of the body of the loop so we don't break stuff with an infinite loop.
 
-console.log("Question 26");
+console.log("Question 26 - 30");
+
+var slaying = true;
+var youHit = Math.floor(Math.random() * 2);
+var damageThisRound = Math.floor(Math.random()*5 + 1);
+var totalDamage = 0;
+
+
 
 while (slaying == true) 
 {
-	console.log("Question 27 - 30");
+	
 	
 	if (youHit == 1)
 	{
 		console.log("Yay, you hit the dog!");
 		
 		totalDamage = totalDamage + damageThisRound;
+        
+        if (totalDamage >= 4) 
+        {
+            console.log("You won!");
+            slaying = false;
+        }
+		else
+		{
+			youHit = Math.floor(Math.random() * 2);
+		}
 	}
-		
-	if (totalDamage >= 4) 
-	{
-		console.log("You won!");
-	}
-	
-	if (totalDamage < 4)
-	{
-		youHit = Math.floor(Math.random() * 2);
-	}
-	
-	
-	if (youHit == 0) 
+	else if (youHit == 0) 
 	{
 		console.log("No, stop beating me!");
+        slaying = false;
 	}
-	slaying = false;
+	
 }
 
 // 27. Inside of your while loop, create a conditional statement. If "youHit" is 1 (which is true),
