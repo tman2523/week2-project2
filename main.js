@@ -425,12 +425,67 @@ confirm("High 5! You made your first JS Game!");
 
 // 19. Use the game you made above and rework it using a switch statement.
 
-//??
+switch (human) 
+{
+	case "rock":
+	switch (computer) 
+		{
+		case "rock":
+			confirm("Tie");
+			break;
+		case "paper":
+			confirm("Paper Wins");
+			break;
+		case "scissors":
+			confirm("Rock Wins")
+			break;
+		default:
+		confirm("User Error");
+		break;
+		}
+	break;
+	case "paper":
+	switch (computer)
+		{
+		case "paper":
+			confirm("Tie");
+			break;
+			
+		case "rock":
+			confirm("Paper Wins");
+			break;
+		
+		case "scissors":
+			confirm("Scissors Wins");
+			break;
+		default:
+		confirm("User Error");
+		break;
+		}
+	break;
+	case "scissors":
+	switch (computer)
+		{
+		case "scissors":
+			confirm("Tie");
+			break;
+		case "rock":
+			confirm("Rock Wins");
+			break;
+		case "paper":
+			confirm("Scissors Wins");
+			break;
+		default:
+		confirm("User Error");
+		break;
+		}
+	break;
+}
 
 // 20. What happens if your user enters something other than "rock", "paper", or "scissors?". Change your default case
 //     to print a snarky message to the console if the input doesn't match any of the options.
 
-//??
+//User Error
 
 // HEDS ER TALES?
 // 21. Use the following variable for your coin flip action:
